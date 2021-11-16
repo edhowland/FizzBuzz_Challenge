@@ -50,7 +50,7 @@ fizzbuzz
 
 Please use the following sample template to submit your code answers:
 
-## Bitsy : Ed  Howland No. 1
+## User/Language[/Count (if more than 1)]
 
 - Coder: Ed Howland [Or use nicknames, first name and last initial or just initials]
 - Email/URL: https://github.com/edhowland [Tis line is optional]
@@ -59,7 +59,7 @@ Please use the following sample template to submit your code answers:
 - Notes:   
 
 Required. How to install, setup your system. Include notes on command line
-options, program invocation. Optionally, include a short description on hwo
+options, program invocation. Optionally, include a short description on how
 the code works
 
 ### Invocation
@@ -71,8 +71,22 @@ the code works
 
 ### The code
 
-```bitsy
+```bitsy{ Sample BitsyLang code follows this comment }
 
+
+## Included code sample files, build scripts and support files
+
+If you want to add your actual files beyond the code in the code listing itself,
+then use the directory structure that matches the beginning Heading Level 2 at the start of your entry.
+
+E.g.
+
+```bash
+
+$ find edhowland
+edhowland/
+edhowland/bitsy
+edhowland/bitsy/fizzbuzz.bitsy
 ```
 
 ## About the license
@@ -86,3 +100,86 @@ then consider creating your own repository and sharing the URL here.
 That's it. Have fun and we look forward to your responses.
 
 # Challenge Responses
+
+## edhowland/bitsy
+
+- Code: Ed Howland
+- Language: Bitsy [Bitsy Specs](https://github.com/apbendi/bitsyspec)
+- Operating System: Linux
+- Notes
+
+
+The Bitsy language does not have support for strings or any other data types
+besides positive and negative integers. This presents a problem for FizzBuzz.
+So, there is a little bit of a cheat here. The code prints -3, -5 and -15
+for cases of Fizz, Buzz and FizzBuzz instead.
+To get the right output, I modified the Ruby version of theBitsy compiler
+to tak an optional flag: --prelude fbio_lib. This file replaces the above
+negative integers with the corresponding strings when 'PRINT -3' is called, for example.
+
+### Requirements
+
+You must have a valid bitsy runner. A program that compile and run legal Bitsy
+code. Included in this repository is a Ruby version that runs on Linux or
+anywhere Ruby 3.0 is installed.
+
+Note: The canonical implementation of Bitsy is written in Swift and only
+runs on MacOS, as far as the the current version of the currnet GitHub
+repository has stated. It might be possible to compile the Swift code for
+bitsy-swift on other platforms, but not to my knowledge.
+
+[bitsy-swift]https://github.com/apbendi/bitsy-swift
+### Invocation
+
+```bash
+$ ./bitsy.rb -p fbio_lib fizzbuzz.bitsy
+```
+
+### The code
+
+```bitsy
+{ fizzbuzz: Code the completes the FizzBuzz Challenge }
+BEGIN
+  x = 1
+  LOOP
+    IFZ x % 3
+      IFZ x % 5
+        PRINT -15
+      ELSE
+        PRINT -3
+      END
+    ELSE
+      IFZ x % 5
+        PRINT -5
+      ELSE
+        PRINT x
+      END
+    END
+    IFZ 100 - x
+      BREAK
+    END
+    x = x + 1
+  END
+
+END
+```
+
+### How the code workks
+
+In Bitsy, there are only 10 keywords. BEGIN, END, LOOP, BREAK, IFP, IFN, IFZ, ELSE, PRINT and READ
+All programs must begin and end with: BEGIN .... END. The left and right curly braces 
+enclose [multi-line]  comments. 
+
+
+#### The conditional statements
+
+- IFP : If the following expression computes to a positive number. '> 0'
+- IFZ. The following expression computes to exactly 0. '== 0'
+- IFN : The following expression computes to a negative integer less than 0; '< 0'
+
+The following operators work with integer expression with or without variables in the expressions:
+
++, -, *, / and %
+
+The only I/O operations are: 'READ x' and 'PRINT expression' Only PRINT expr is used
+here.

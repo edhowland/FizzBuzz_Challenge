@@ -1,0 +1,23 @@
+{ fizzbuzz: Code the completes the FizzBuzz Challenge }
+BEGIN
+  x = 1
+  LOOP
+    IFZ x % 3
+      IFZ x % 5
+        PRINT -15
+      ELSE
+        PRINT -3
+      END
+    ELSE
+      IFZ x % 5
+        PRINT -5
+      ELSE
+        PRINT x
+      END
+    END
+    IFZ 100 - x
+      BREAK
+    END
+    x = x + 1
+  END
+END
