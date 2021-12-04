@@ -1,0 +1,105 @@
+    1  echo 'export PS1="aws> "'
+    2  echo 'export PS1="aws> "' >> ~/.bashrc
+    3  source .bashrc
+    4  sudo apt update && sudo apt install -y pv
+    5  which pv
+    6  dd if=/dev/zero bs=65536 | pv -r >/dev/null
+    7  file fizz_buzz 
+    8  ./fizz_buzz  | head -15
+    9  ./fizz_buzz  | pv -r >/dev/null
+   10  exit
+   11  ./fizzbuzz  | pv -r >/dev/null
+   12  exit
+   13  ./fizzbuzz  | pv -r >/dev/null
+   14  exit
+   15  mkdir -p rust/dude rust/edh C/naive
+   16  mv fizzbuzz  rust/edh/
+   17  cp fizz_buzz  rust/dude/
+   18  docker pull edhowland/viper
+   19  docker --rm -v ${PWD}:/work edhowland/viper
+   20  docker run --rm -v ${PWD}:/work edhowland/viper
+   21  docker --rm -it  -v ${PWD}:/work edhowland/viper /bin/bash
+   22  docker run --rm -it -v ${PWD}:/work edhowland/viper  /bin/bash
+   23  docker run --rm -it -v ${PWD}:/work edhowland/viper  /work/foo.sh
+   24  chmod +x ./foo.sh 
+   25  file foo.sh 
+   26  ./foo.sh
+   27  chmod +x ./foo.sh
+   28  sudo chmod +x ./foo.sh 
+   29  ./foo.sh 
+   30  alias sa='alias > ~/.alias'
+   31  sa
+   32  alias sa
+   33  echo 'source ~/.alias'
+   34  echo 'source ~/.alias' >> .bashrc
+   35  exit
+   36  alias sa
+   37  alias vn='docker run --rm -it -v ${PWD}:/work edhowland/viper'
+   38  vn /work/foo.sh
+   39  rm foo.sh 
+   40  ls foo.sh
+   41  find .
+   42  ls C
+   43  sa
+   44  exit
+   45  ls c
+   46  ls C
+   47  exit
+   48  cd rust/edh/
+   49  ls
+   50  ./fizzbuzz-debug  | pv -r >/dev/null
+   51  ./fizzbuzz | pv -r >/dev/null
+   52  cd ..
+   53  ls
+   54  ls dude
+   55  cd ../C/naive/
+   56  ./fizzbuzz | pv -r >/dev/null
+   57  ./fizzbuzz-slow  | pv -r >/dev/null
+   58  cd
+   59  find rust C
+   60  find rust C > Manifest.md
+   61  vn Manifest.md 
+   62  which git
+   63  mkdir docs
+   64  cd docs
+   65  git init .
+   66  cd ..
+   67  ln Manifest.md  docs/Manifest.md
+   68  ls docs
+   69  exit
+   70  cd docs/
+   71  ls
+   72  git add -A
+   73  git status
+   74  git commit -m 'Initial commit of some docs'
+   75  git status
+   76  git config --global user.name "Ed Howland"
+   77  git config user.name
+   78  git config --global user.email "ed.howland@gmail.com"
+   79  git config user.email
+   80  git commit -m 'Initial commits of docs'
+   81  git status
+   82  exit
+   83  vn README.md
+   84  ln README.md ` docs/README.md
+   85  ln README.md  docs/README.md
+   86  ls docs
+   87  ln README.md  docs/
+   88  ln -s README.md  docs/
+   89  ls docs
+   90  cd docs/
+   91  git add README.md 
+   92  git commit -m 'Added README.md'
+   93  git status
+   94  cd ..
+   95  ls -1
+   96  exit
+   97  docker run --rm ruby:latest ruby -v
+   98  docker run --rm -v ${PWD}:/work ruby:latest ruby /work/fizzbuzz-hp.rb | dd of=/dev/null bs=1M iflag=fullblock count=10000
+   99  ls -1 
+  100  ls -1
+  101  history
+  102  df 
+  103  docker rmi edhowland/viper
+  104  echo $?
+  105  history >h.out
