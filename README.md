@@ -4,18 +4,16 @@ A placeholder for entries in the FizzBuzz Challenge
 
 ## Background
 
-In September 2021, some members of the St. Louis Unix User's Group: [St. Louis Unix User's Group](https://www.sluug.org)
+In September 2021, some members of the [St. Louis Unix User's Group](https://www.sluug.org)
 participated in a programming challenge: FizzBuzz. Members submitted their
-answers on the group's discussion mailing list
+answers on the group's discussion mailing list.
 
 [SLUUG Discuss ML: https://www.sluug.org/mailman/listinfo/discuss](https://www.sluug.org/mailman/listinfo/discuss)
 
-
 This repository is a hub for investigating the various approaches to the challenge.
 Members and anyone else who wish can submit their answers and they can be discussed
-herein. Just fork this repository and edit this file, push it and issue
-an pull request [PR].
-
+herein. Just fork this repository and edit this file, push it, and issue
+a pull request [PR].
 
 ## The challenge
 
@@ -53,7 +51,7 @@ Please use the following sample template to submit your code answers:
 ## User/Language[/Count (if more than 1)]
 
 - Coder: Ed Howland [Or use nicknames, first name and last initial or just initials]
-- Email/URL: https://github.com/edhowland [Tis line is optional]
+- Email/URL: https://github.com/edhowland [This line is optional]
 - Programming Language: Bitsy  [Required. Include release/version, if required to run your code]
 - Operating System: Linux   [Optional. Some languages work better on some platforms better than others]
 - Notes:   
@@ -91,7 +89,7 @@ edhowland/bitsy/fizzbuzz.bitsy
 
 ## About the license
 
-All code submitted here will be subject to theM.I.T. License.
+All code submitted here will be subject to the M.I.T. License.
 Please see: [LICENSE](LICENSE)
 
 This license is fairly permissive, but if you do not want submit it here but still participate,
@@ -113,7 +111,7 @@ The Bitsy language does not have support for strings or any other data types
 besides positive and negative integers. This presents a problem for FizzBuzz.
 So, there is a little bit of a cheat here. The code prints -3, -5 and -15
 for cases of Fizz, Buzz and FizzBuzz instead.
-To get the right output, I modified the Ruby version of theBitsy compiler
+To get the right output, I modified the Ruby version of the Bitsy compiler
 to tak an optional flag: --prelude fbio_lib. This file replaces the above
 negative integers with the corresponding strings when 'PRINT -3' is called, for example.
 
