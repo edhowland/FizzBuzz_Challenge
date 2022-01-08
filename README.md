@@ -69,8 +69,9 @@ the code works
 
 ### The code
 
-```bitsy{ Sample BitsyLang code follows this comment }
-
+```bitsy
+{ Sample BitsyLang code follows this comment }
+```
 
 ## Included code sample files, build scripts and support files
 
@@ -81,10 +82,10 @@ E.g.
 
 ```bash
 
-$ find edhowland
+$ tree edhowland/
 edhowland/
-edhowland/bitsy
-edhowland/bitsy/fizzbuzz.bitsy
+└── bitsy
+    └── fizzbuzz.bitsy
 ```
 
 ## About the license
@@ -179,5 +180,14 @@ The following operators work with integer expression with or without variables i
 
 +, -, *, / and %
 
-The only I/O operations are: 'READ x' and 'PRINT expression' Only PRINT expr is used
+The only I/O operations are: 'READ x' and 'PRINT expression'. Only PRINT expr is used
 here.
+
+
+<!-- Ed: remove this line -->
+
+<!-- Robert: remove this line -->
+
+
+
+
